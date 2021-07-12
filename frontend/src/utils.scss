@@ -1,0 +1,90 @@
+.btn {
+	/* Display & Box Model */
+	border: 0;
+	outline: none;
+	/* Other */
+	cursor: pointer;
+	text-decoration: none;
+	/* Text */
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.base-btn {
+	@extend .btn;
+
+	/* Display & Box Model */
+	margin: 0 10px;
+	/* Color */
+	color: $white;
+	background-color: transparent;
+}
+
+.base-btn-filled {
+	@extend .btn;
+
+	/* Display & Box Model */
+	padding: 10px 20px;
+	margin: 0 10px;
+	/* Color */
+	color: $white;
+	background-color: $purple;
+	border-radius: 5px;
+	/* Other */
+	transition: background-color 0.2s ease;
+
+	&:hover {
+		/* Color */
+		background-color: $purple-dark;
+	}
+}
+
+.complex-btn-filled {
+	@extend .btn;
+
+	/* Display & Box Model */
+	box-sizing: border-box;
+	position: relative;
+	padding: 10px 20px;
+	margin: 6px 6px;
+	border: 1px solid transparent;
+	/* Color */
+	color: $black;
+	background-color: $white;
+	/* Text */
+	font-family: "Raleway", sans-serif;
+	font-weight: bold;
+	line-height: 1;
+	font-size: 15px;
+
+	&::after {
+		/* Display & Box Model */
+		position: absolute;
+		content: "";
+		box-sizing: border-box;
+		width: calc(100% + 14px);
+		height: calc(100% + 14px);
+		top: -7px;
+		left: -7px;
+		/* Color */
+		border: 1px solid rgba($white, 0.5);
+		background: transparent;
+	}
+
+	&:hover {
+		/* Color */
+		color: $white;
+		background-color: $purple;
+	}
+}
+
+.complex-btn {
+	@extend .complex-btn-filled;
+	border: 1px solid $white;
+	color: $white;
+	background-color: transparent;
+
+	&:hover {
+		border: 1px solid transparent;
+	}
+}
