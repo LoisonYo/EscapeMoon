@@ -20,5 +20,5 @@ Le projet est divisé en deux parties :
 
 ## Equipe
 * Yohann Loison
-* Rajith Ravindranathan
+* Rajinth Ravindranathan
 * Grégoire Rebstein
